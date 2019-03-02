@@ -23,7 +23,7 @@ If you don't, try the following steps:
   pyenv install 3.7.2
   ```
 
-For this step to complete you may need some system dependencies, e.g. on CentOS make sure you have these pkgs: 
+For this step to complete you may need some system dependencies: 
 zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel libzbar-dev
 
 ### Setting up the project
@@ -31,8 +31,8 @@ zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz
 * clone it
 * configure the venv:
   ```sh
-  cd HurraAccount/REST
-  pyenv local 3.6.8
+  cd SPSP/src/python
+  pyenv local 3.7.2
   python -m venv env/
   source env/bin/activate
   ```
@@ -57,7 +57,7 @@ zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz
 ### WebServer
 First always remember to activate the virtual env:
 ```sh
-cd HurraAccount/REST
+cd SPSP/src/python
 source env/bin/activate
 ```
 
