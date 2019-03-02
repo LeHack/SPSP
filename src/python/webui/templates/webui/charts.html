@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!-- Included in index.html -->
+<div class="modal fade" id="charts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Wykres</h4>
+      </div>
+      <div class="modal-body">
+        <img src="{% static 'images/empty.png' %}" class='hidden'></img>
+        <div class="progress">
+		  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+		    <span class="sr-only">Ładowanie...</span>
+		  </div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <div class="dropup toLeft">
+            <button id="dropdownType" href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
+                Parametr: <span class="selectedVal"></span> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownType">
+                {% for entry in params.available %}
+                    <li data-value="{{ entry.id }}"><a href="#" onClick="chart_instance.setType('{{ entry.id }}');">{{ entry.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="dropup toLeft">
+            <button id="dropdownRange" href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                Zakres: <span class="selectedVal"></span> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownRange">
+                {% for entry in params.ranges %}
+                    <li data-value="{{ entry.id }}"><a href="#" onClick="chart_instance.setRange('{{ entry.id }}');">{{ entry.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            Zamknij
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

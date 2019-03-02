@@ -1,0 +1,1 @@
+Switching Comms module API to enable/ready and intermediate flags for coop.

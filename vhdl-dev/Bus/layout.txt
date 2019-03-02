@@ -1,0 +1,6 @@
+SDRAM (internal)
+see docs
+
+EEPROM (internal)
+I2C_SCL - EEPROM SCLK - -- /  F2 - EEPROM_SCL
+I2C_SDA - EEPROM SDAT - -- /  F1 - EEPROM_SDA

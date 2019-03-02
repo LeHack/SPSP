@@ -1,0 +1,127 @@
+{% load staticfiles %}
+{% load getattr %}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SPSP</title>
+
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}">
+        <link rel="stylesheet" href="{% static 'styles/basic.css' %}">
+
+		<link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap-theme.min.css' %}" crossorigin="anonymous">
+        <script src="{% static 'js/jquery-3.1.1.js' %}" crossorigin="anonymous"></script>
+		<script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="{% static 'styles/list.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/chart.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/settings.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/liveview.css' %}">
+        <script src="{% static 'js/list.js' %}"></script>
+        <script src="{% static 'js/chart.js' %}"></script>
+        <script src="{% static 'js/settings.js' %}"></script>
+        <script src="{% static 'js/liveview.js' %}"></script>
+
+        <link rel="stylesheet" href="{% static 'styles/pikaday.css' %}">
+        <script src="{% static 'js/moment.min.js' %}"></script>
+        <script src="{% static 'js/pikaday.js' %}"></script>
+    </head>
+
+    <body>
+    <div class="jumbotron logo">
+        <h1>SPSP</h1>
+        <p>System pomiaru stężenia pyłów w powietrzu.</p>
+    </div>
+    <form id="data" action="/" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        {% for param, value in params.selected.items %}
+            <input type="hidden" name="{{ param }}" value="{{ value }}"/>
+        {% endfor %}
+    </form>
+    <div class="row">
+        <div class="col-md-6">
+            <button id="selectDate" class="btn btn-default" role="button">
+                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                Data: <span class="value">{{ params.selected.date }}</span><span class="caret"></span>
+            </button>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#charts">
+                <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                Wykresy
+            </button>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#liveview">
+                <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
+                Na żywo
+            </button>
+		    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#settings">
+                <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+		        Ustawienia
+		    </button>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+{% if data %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Czas pomiaru</th>
+                {% for pt in params.available %}
+	               <th>{{ pt.label }}</th>
+	            {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in data %}
+	        <tr>
+	            <td>{{ entry.date }}</td>
+                {% for pt in params.found %}
+                    {% with entry|getattr:pt.id as val %}
+	                   <td class="measurement {{ val.class }}">
+		               {% if val.norm != None %}
+	                       {{ val.raw }} {{ pt.unit|safe }} [{{ val.norm }}%]
+		               {% else %}
+		                   {{ val.raw }} {{ pt.unit|safe }}
+		               {% endif %}
+		               </td>
+		           {% endwith %}
+               {% endfor %}
+	         </tr>
+            {% endfor %}
+         </tbody>
+    </table>
+{% else %}
+    <div class="jumbotron message">
+        <h4>Brak danych dla wybranych parametrów.</h4>
+    </div>
+{% endif %}
+    <!-- Includes -->
+    {% include "webui/settings_form.html" %}
+    {% include "webui/live_view.html" %}
+    {% include "webui/charts.html" %}
+    <script>
+        var picker = new Pikaday({
+            events: [{date: new Date(2016,12,3), backgroundColor: '#000000', color: '#FFFFFF'}],
+            field: jQuery("#data input[name=date]").get(0),
+            trigger: jQuery("#selectDate").get(0),
+            format: 'YYYY-MM-DD',
+            firstDay: 1,
+            minDate: new Date(2016,10,1),
+            maxDate: new Date(),
+            onSelect: function() {
+                setAndSubmit('date', this.getMoment().format('YYYY-MM-DD'));
+            }
+        });
+        var chart_instance = new Chart('{{ params.chart.type }}', '{{ params.chart.range }}');
+        $('#charts').on('show.bs.modal', function (e) {
+            chart_instance.reload();
+        })
+        $('#settings').on('show.bs.modal', function (e) {
+            loadSettings();
+        });
+        $('#liveview').on('show.bs.modal', function (e) {
+            loadReadings();
+        });
+    </script>
+    </body>
+</html>

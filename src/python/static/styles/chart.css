@@ -1,0 +1,11 @@
+#charts .hidden {
+	display: none;
+}
+
+#charts div.toLeft {
+	float: left;
+}
+
+#charts .modal-body {
+	text-align: center;
+}

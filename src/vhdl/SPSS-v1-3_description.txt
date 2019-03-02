@@ -1,0 +1,3 @@
+Fixed off-by-1 error in scheduling measurements.
+Added GETTMSTAMP call for synchronization purposes. GETREADING now returns the timestamp of the last actual reading.
+Data is now stored *AFTER* processing.

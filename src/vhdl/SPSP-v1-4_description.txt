@@ -1,0 +1,3 @@
+Added handling of BT Connected indicator (RN4020 PIN10), including cmd channel monitoring only when it's high and auto-reset of the uid.
+Added possibility to specify resolution via API GETSTORED request.
+Added a response record count to the cmd channel for GETSTORED.

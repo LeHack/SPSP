@@ -1,0 +1,109 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Intel and sold by Intel or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.0.1 Build 598 06/07/2017 SJ Lite Edition
+# Date created = 11:03:22  wrzesień 23, 2017
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		SchedulerModule_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE22F17C6
+set_global_assignment -name TOP_LEVEL_ENTITY Main
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:03:22  WRZESIEń 23, 2017"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS OFF
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS OFF
+set_location_assignment PIN_L3 -to LED[7]
+set_location_assignment PIN_B1 -to LED[6]
+set_location_assignment PIN_F3 -to LED[5]
+set_location_assignment PIN_D1 -to LED[4]
+set_location_assignment PIN_A11 -to LED[3]
+set_location_assignment PIN_B13 -to LED[2]
+set_location_assignment PIN_A13 -to LED[1]
+set_location_assignment PIN_A15 -to LED[0]
+set_location_assignment PIN_R8 -to CLOCK_50
+set_location_assignment PIN_R10 -to sensors_inout.HUM_DAT
+set_location_assignment PIN_A9 -to sensors_in.ADC_SDAT
+set_location_assignment PIN_B14 -to sensors_out.ADC_SCLK
+set_location_assignment PIN_B10 -to sensors_out.ADC_SADDR
+set_location_assignment PIN_A10 -to sensors_out.ADC_CS_N
+set_location_assignment PIN_G16 -to sensors_out.PM_ILED
+set_location_assignment PIN_P11 -to sensors_inout.PRESS_SCL
+set_location_assignment PIN_T10 -to sensors_inout.PRESS_SDA
+set_location_assignment PIN_R11 -to sensors_out.PRESS_SDO
+set_global_assignment -name QIP_FILE ext/div_signed.qip -library ext
+set_global_assignment -name VHDL_FILE utils/clock_divider_a.vhdl -library utils
+set_global_assignment -name VHDL_FILE utils/clock_divider.vhdl -library utils
+set_global_assignment -name VHDL_FILE ext/i2c_master.vhdl -library ext
+set_global_assignment -name VHDL_FILE Main_a.vhdl
+set_global_assignment -name VHDL_FILE Main.vhdl
+set_global_assignment -name VHDL_FILE utils/types.vhdl -library utils
+set_global_assignment -name VHDL_FILE modules/Sensor_a.vhdl -library modules
+set_global_assignment -name VHDL_FILE modules/Sensor.vhdl -library modules
+set_global_assignment -name VHDL_FILE modules/Scheduler_a.vhdl -library modules
+set_global_assignment -name VHDL_FILE modules/Scheduler.vhdl -library modules
+set_global_assignment -name VHDL_FILE ext/spi_master.vhdl -library ext
+set_global_assignment -name QIP_FILE ext/div24.qip -library ext
+set_global_assignment -name VHDL_FILE drivers/lps331ap_a.vhdl -library drivers
+set_global_assignment -name VHDL_FILE drivers/lps331ap.vhdl -library drivers
+set_global_assignment -name VHDL_FILE drivers/gp2y1010_a.vhdl -library drivers
+set_global_assignment -name VHDL_FILE drivers/gp2y1010.vhdl -library drivers
+set_global_assignment -name VHDL_FILE drivers/dht11_a.vhdl -library drivers
+set_global_assignment -name VHDL_FILE drivers/dht11.vhdl -library drivers
+set_global_assignment -name VHDL_FILE drivers/de0nano_adc_a.vhdl -library drivers
+set_global_assignment -name VHDL_FILE drivers/de0nano_adc.vhdl -library drivers
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

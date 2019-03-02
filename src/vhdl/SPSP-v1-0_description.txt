@@ -1,0 +1,3 @@
+Added and tested the missing settings:
+- pressure relative point
+- display timeout

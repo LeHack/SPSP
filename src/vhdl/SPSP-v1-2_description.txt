@@ -1,0 +1,5 @@
+First set of issues fixed:
+- checksum offset (checksum for 0 != 0)
+- corrected display driver with adapter to old board
+- fixed GETREADING command to return latest data with correct checksum
+- added temperature shift (+40) and updated display code to show the below zero temperatures correctly

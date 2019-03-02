@@ -1,0 +1,81 @@
+<!-- Included in index.html -->
+<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ustawienia</h4>
+      </div>
+      <div class="modal-body">
+         <div class="form hidden">
+	        <label for="pm10norm">Norma PM10</label>
+	        <div class="input-group">
+			  <input id="pm10norm" type="text" class="form-control" placeholder="50" aria-describedby="basic-addon2">
+	          <span class="input-group-addon" id="basic-addon2">µg/m³</span>
+			</div>
+			<div class="settings-error-field pm10norm"></div>
+
+	        <label for="freq">Częstotliwość odczytów (co ile sekund)</label>
+	        <div class="input-group">
+	          <input id="mFreq" type="text" class="form-control" placeholder="60" aria-describedby="basic-addon2">
+	          <span class="input-group-addon" id="basic-addon2">s</span>
+	        </div>
+	        <div class="settings-error-field mFreq"></div>
+
+	        <label for="sampl">Rozmiar próbkowania</label>
+	        <div class="input-group">
+	          <input id="sampleSize" type="text" class="form-control" placeholder="10" aria-describedby="basic-addon2">
+	          <span class="input-group-addon" id="basic-addon2">liczba próbek</span>
+	        </div>
+	        <div class="settings-error-field sampleSize"></div>
+
+	        <label for="disploff">Czas wygaszania wyświetlacza</label>
+	        <div class="input-group">
+	          <input id="dispTime" type="text" class="form-control" placeholder="10" aria-describedby="basic-addon2">
+	          <span class="input-group-addon" id="basic-addon2">s</span>
+	        </div>
+	        <div class="settings-error-field dispTime"></div>
+
+	        <label for="pressref">Wartość referencyjna ciś. atm.</label>
+	        <div class="input-group">
+	          <input id="pressRef" type="text" class="form-control" placeholder="-35" aria-describedby="basic-addon2">
+	          <span class="input-group-addon" id="basic-addon2">hPa</span>
+	        </div>
+	        <div class="settings-error-field pressRef"></div>
+
+	        <label for="btname">Nazwa urządzenia (bluetooth)</label>
+	        <div class="input-group">
+	          <input id="btName" type="text" class="form-control" placeholder="SPSP-001" aria-describedby="basic-addon2">
+	          <span class="input-group-addon" id="basic-addon2">[10 znaków]</span>
+	        </div>
+	        <div class="settings-error-field btName"></div>
+	     </div>
+	     <div class="updating hidden">
+	         <div class="updating-textbox">
+		         <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>
+		         <span class="msg">Trwa aktualizacja ustawień...</span>
+	         </div>
+	     </div>
+         <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">Ładowanie...</span>
+            </div>
+         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            Anuluj
+        </button>
+        <button type="button" class="btn btn-default" onClick="loadSettings(true)">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+            Odśwież
+        </button>
+        <button type="button" class="btn btn-primary" onClick="updateSettings()">
+            <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
+            Zapisz
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

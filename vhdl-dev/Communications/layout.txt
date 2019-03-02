@@ -1,0 +1,38 @@
+BT4 (GPIO-1):
+SW  - GPIO_120	- 25 / P15 - BLU - WAKE_SW
+HW  - GPIO_121	- 26 / P16 - GRE - WAKE_HW
+TX  - GPIO_122	- 27 / R14 - YEL - RX
+RX  - GPIO_123	- 28 / N16 - ORA - TX
+VDD - 3V3	- 29   	   - RED
+GND - GND	- 30	   - BRW
+    ___
+BLU YEL RED
+GRE ORA BRW
+
+
+Unused:
+
+74HC595 (register)
+SHCP - GPIO_14   -  7 / R13 - GRA - REG_CLK
+DS   - GPIO_16   -  9 / R12 - VIO - REG_DATA
+STCP - GPIO_17   - 10 / T11 - WHI - REG_LATCH
+
+74HC4053 (multiplexer)
+M1S1 - GPIO_18   - 13 / T10 - ORA - MLTPLX_CH 0
+M1S2 - GPIO_19   - 14 / R11 - YEL - MLTPLX_CH 1
+M2S1 - GPIO_110  - 15 / P11 - GRE - MLTPLX_CH 2
+M2S2 - GPIO_111  - 16 / R10 - BLU - MLTPLX_CH 3
+        ___
+GRA VIO RED ORA GRE
+ -  WHI BLA YEL BLU
+
+Debug:
+KEYS (internal)
+KLEFT  - KEY[0]  - -- / J15 - KEY 0
+KRIGHT - KEY[1]  - -- /  E1 - KEY 1
+
+DIPSW (internal)
+DSW0 - Dip Switch 0  - -- /  M1 - DIPSW 0
+DSW1 - Dip Switch 1  - -- /  T8 - DIPSW 1
+DSW2 - Dip Switch 2  - -- /  B9 - DIPSW 2
+DSW3 - Dip Switch 3  - -- / M15 - DIPSW 3

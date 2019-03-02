@@ -1,0 +1,44 @@
+h1, p {
+	margin: 0.6em;
+}
+
+table.data {
+	width: 100%;
+	padding: 1em;
+}
+
+table.data tr {
+    background: #eeeeff;
+    color: #46494c;
+    cursor: default;
+}
+
+table.data td {
+    padding: 0.4em;
+}
+
+table.data tr:hover {
+	background: #ffffff;
+}
+
+table.data thead {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+table.data tbody td {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+td.measurement {
+    text-align: center;
+}
+
+td.timestamp {
+	width: 10em;
+}
+
+td.station {
+    width: 15em;
+}

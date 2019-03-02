@@ -1,0 +1,1 @@
+Add feedback for selected resolution (using first 5 bytes of the first data channel).

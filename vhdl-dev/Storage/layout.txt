@@ -1,0 +1,28 @@
+SDRAM (internal)
+see docs
+
+EEPROM (internal)
+I2C_SCL - EEPROM SCLK - -- /  F2 - EEPROM_SCL
+I2C_SDA - EEPROM SDAT - -- /  F1 - EEPROM_SDA
+
+KEYS (internal)
+KLEFT  - KEY[0]  - -- / J15 - KEY 0
+KRIGHT - KEY[1]  - -- /  E1 - KEY 1
+
+SEGMENT DISPLAY (GPIO-1):
+VCC  - 5V        - 11 /  -- - RED
+GND  - GND       - 12 /  -- - BLA
+
+74HC595 (register)
+SHCP - GPIO_14   -  7 / R13 - GRA - REG_CLK
+DS   - GPIO_16   -  9 / R12 - VIO - REG_DATA
+STCP - GPIO_17   - 10 / T11 - WHI - REG_LATCH
+
+74HC4053 (multiplexer)
+M1S1 - GPIO_18   - 13 / T10 - ORA - MLTPLX_CH 0 - Dig4 - M2D4
+M1S2 - GPIO_19   - 14 / R11 - YEL - MLTPLX_CH 1 - Dig3 - M2D3
+M2S1 - GPIO_110  - 15 / P11 - GRE - MLTPLX_CH 2 - Dig2 - M1D2
+M2S2 - GPIO_111  - 16 / R10 - BLU - MLTPLX_CH 3 - Dig1 - M1D1
+        ___
+GRA VIO RED ORA GRE
+ -  WHI BLA YEL BLU

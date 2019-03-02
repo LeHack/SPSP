@@ -1,0 +1,4 @@
+All modules integrated and working.
+There are still issues with archived data (transfer or storage access related).
+Also the pressure relative point is still hardcoded into the LPS driver.
+Finally the set display timeout API command is missing.

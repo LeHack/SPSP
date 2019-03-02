@@ -1,0 +1,40 @@
+#settings .hidden {
+	display: none;
+}
+
+#settings .updating-textbox {
+	width: 70%;
+	height: 200px;
+	display: block;
+	font-size: 15pt;
+	background: rgb(255,255,255);
+	text-align: center;
+	padding-top: 14%;
+	position: absolute;
+	left: 15%;
+	top: 30%;
+}
+
+#settings .updating {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	background: #0005;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+#settings .updating
+
+#settings .updating .msg {
+	display: block;
+}
+
+#settings label {
+	padding-top: 8pt;
+}
+
+#settings .settings-error-field {
+	color: red;
+}
