@@ -40,16 +40,15 @@ zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz
   ```sh
   pip install -U setuptools pip
   pip install -e .
-  python manage.py migrate
   ```
-* build the bluepy command line tool (if env/lib/python3.7/site-packages/bluepy/bluepy-helper is not present):
+* build the bluepy helper binary (only if env/lib/python3.7/site-packages/bluepy/bluepy-helper is not present):
   ```sh
   cd env/lib/python3.7/site-packages/bluepy/
   make
   ```
 * plug in and configure your device, e.g.:
   ```sh
-  python scripts/setup.py --addr AA:BB:CC:DD:EE:FF --code SPSP-001
+  python scripts/setup.py --addr AA:BB:CC:DD:EE:FF --code SPSP
   ```
 
 ## Running
@@ -71,3 +70,12 @@ and configure it to run via uwsgi or a similar solution.
 
 ### UI
 Open your favourite browser and navigate to 127.0.0.1:8888
+
+### Data fetching
+In order to fetch measurement data from the device, one must call:
+```sh
+python scripts/direct_run.py --code SPSP-001
+```
+Optimally, this should be put in a cronjob somewhere so that the latest data is fetched e.g. every 10 minutes.
+Don't worry about missing any measurements. The system will always start from the latest
+fetch and continue until it catches up with the latest readings.
