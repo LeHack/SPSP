@@ -72,16 +72,16 @@ and configure it to run via uwsgi or a similar solution.
 Open your favourite browser and navigate to 127.0.0.1:8888
 
 Here are the 4 main parts of the UI:
-* readings table:
+* readings table:  
   ![data table](doc/lista.png)
 
-* live view:
+* live view:  
   ![live view](doc/podglad.png)
 
-* charts:
+* charts:  
   ![charts](doc/wykres.png)
 
-* settings:
+* settings:  
   ![settings](doc/ustawienia.png)
 
 ### Data fetching
@@ -95,7 +95,7 @@ fetch and continue until it catches up with the latest readings.
 
 ### API binding for Python
 The API django app is a standalone utility which can be used to access and control the device.
-Here's a helpful diagram of what's available in the API:
+Here's a helpful diagram of what's available in the API:  
 ![api](doc/SPSP_API_PY.png)
 
 For more details checkout the code at [src/python/API/SPSP.py](API/SPSP.py).
