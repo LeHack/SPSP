@@ -71,6 +71,16 @@ and configure it to run via uwsgi or a similar solution.
 ### UI
 Open your favourite browser and navigate to 127.0.0.1:8888
 
+Here are the 4 main parts of the UI:
+* readings table:
+[data table](src/python/doc/lista.png)
+* live view:
+[live view](src/python/doc/podglad.png)
+* charts:
+[charts](src/python/doc/wykres.png)
+* settings:
+[settings](src/python/doc/ustawienia.png)
+
 ### Data fetching
 In order to fetch measurement data from the device, one must call:
 ```sh
@@ -79,3 +89,9 @@ python scripts/direct_run.py --code SPSP-001
 Optimally, this should be put in a cronjob somewhere so that the latest data is fetched e.g. every 10 minutes.
 Don't worry about missing any measurements. The system will always start from the latest
 fetch and continue until it catches up with the latest readings.
+
+### API binding for Python
+The API django app is a standalone utility which can be used to access and control the device.
+Here's a helpful diagram of what's available in the API:
+[api](src/python/doc/SPSP_API_PY.png)
+For more details checkout the code at [src/python/API/SPSP.py](src/python/API/SPSP.py).
