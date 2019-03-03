@@ -73,13 +73,16 @@ Open your favourite browser and navigate to 127.0.0.1:8888
 
 Here are the 4 main parts of the UI:
 * readings table:
-[data table](doc/lista.png)
+  ![data table](doc/lista.png)
+
 * live view:
-[live view](doc/podglad.png)
+  ![live view](doc/podglad.png)
+
 * charts:
-[charts](doc/wykres.png)
+  ![charts](doc/wykres.png)
+
 * settings:
-[settings](doc/ustawienia.png)
+  ![settings](doc/ustawienia.png)
 
 ### Data fetching
 In order to fetch measurement data from the device, one must call:
@@ -93,5 +96,6 @@ fetch and continue until it catches up with the latest readings.
 ### API binding for Python
 The API django app is a standalone utility which can be used to access and control the device.
 Here's a helpful diagram of what's available in the API:
-[api](src/python/doc/SPSP_API_PY.png)
+![api](doc/SPSP_API_PY.png)
+
 For more details checkout the code at [src/python/API/SPSP.py](API/SPSP.py).
