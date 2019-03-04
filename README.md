@@ -1,5 +1,5 @@
 # SPSP
-Particulate matter pollution monitoring system (:poland: System Pomiaru Stężenia Pyłu w powietrzu )
+Particulate matter pollution monitoring system (:poland: System Pomiaru Stężenia Pyłu w powietrzu)
 
 This repository contains my bachelor of engineering project.
 
