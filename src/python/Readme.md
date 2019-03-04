@@ -94,8 +94,4 @@ Don't worry about missing any measurements. The system will always start from th
 fetch and continue until it catches up with the latest readings.
 
 ### API binding for Python
-The API django app is a standalone utility which can be used to access and control the device.
-Here's a helpful diagram of what's available in the API:  
-![api](doc/SPSP_API_PY.png)
-
-For more details checkout the code at [src/python/API](API).
+See the code at [src/python/API](API).

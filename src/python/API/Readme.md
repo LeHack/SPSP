@@ -1,3 +1,8 @@
+## SPSP - API binding for Python
+This API django app is a standalone utility which can be used to access and control the device.
+Here's a helpful diagram of what's available in the API:  
+![api](../doc/SPSP_API_PY.png)
+
 ### API Command internals
 In order to send an API command, one must:
 * connect to the device
