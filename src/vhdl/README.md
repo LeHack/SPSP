@@ -3,20 +3,20 @@
 ### Code layout :zap:
 
 * drivers - low level code interfacing directly with the external devices
-  * de0nano_adc - reads data from the DE0Nano Analog to Digital converter, used for reading PM10 levels (analog)
-  * dht11 - drives the humidity sensor
-  * eeprom - drives the internal EEPROM memory of DE0Nano
-  * gp2y1010 - drives the PM10 sensor
-  * lps331ap - drives from the pressure and temperature sensor
-  * rn4020 - drives the Bluetooth transceiver
+  * de0nano_adc - reads data from the DE0Nano Analog to Digital converter, used for reading PM10 levels (analog) using SPI
+  * dht11 - drives the humidity sensor using a custom 1-wire interface
+  * eeprom - drives the internal EEPROM memory of DE0Nano using I²C
+  * gp2y1010 - drives the PM10 sensor directly
+  * lps331ap - drives from the pressure and temperature sensor using I²C
+  * rn4020 - drives the Bluetooth transceiver using UART
   * sdram - drives the internal SDRAM memory of DE0Nano
-  * shift_reg - used by sm410564 driver to control the display
-  * sm410564 - drives the display
+  * shift_reg - used by sm410564 driver to control the display using SPI
+  * sm410564 - drives the display directly
 * ext - external code and modules, usually from Quartus or eewiki
   * mult, div - arithmetic multiplication and division modules (signed 24 bit, unsigned 24 bit and unsigned 16 bit)
   * sdram_clk_pll - SDRAM clock signal generator (100MHz and 100Mhz + 4us)
-  * i2c_master - I2C implementation
-  * spi master - SPI implementation
+  * i2c_master - Inter-integrated Circuit Protocol (I²C) implementation
+  * spi master - Serial Peripheral Interface (SPI) implementation
   * uart - UART implementation
 * modules - implement main system operation logic
 * simulation - integration tests using ModelSim
