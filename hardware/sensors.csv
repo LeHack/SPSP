@@ -1,0 +1,7 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"C1";"CP_Radial_Tantal_D6.0mm_P2.50mm";1;"220uF";;;
+2;"J2,J3";"Pin_Header_Straight_2x07_Pitch2.54mm";2;"Conn_02x07_Odd_Even";;;
+3;"R1";"R_1206_HandSoldering";1;"150";;;
+4;"R2";"R_1206_HandSoldering";1;"5k";;;
+5;"U3";"DHT11";1;"DHT11";;;
+6;"C2,C3";"C_Disc_D4.3mm_W1.9mm_P5.00mm";2;"50nF";;;

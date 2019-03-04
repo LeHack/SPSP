@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name sensors_and_display_boards-rescue)(type Legacy)(uri ${KIPRJMOD}/sensors_and_display_boards-rescue.lib)(options "")(descr ""))
+  (lib (name spsp_components)(type Legacy)(uri ${KIPRJMOD}/spsp_components.lib)(options "")(descr ""))
+)

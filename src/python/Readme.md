@@ -1,4 +1,4 @@
-# SPSP UI
+# SPSP - User Interface
 
 ## Building
 
@@ -98,4 +98,4 @@ The API django app is a standalone utility which can be used to access and contr
 Here's a helpful diagram of what's available in the API:  
 ![api](doc/SPSP_API_PY.png)
 
-For more details checkout the code at [src/python/API/SPSP.py](API/SPSP.py).
+For more details checkout the code at [src/python/API](API).

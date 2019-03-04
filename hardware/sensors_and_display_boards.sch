@@ -1,0 +1,556 @@
+EESchema Schematic File Version 4
+LIBS:sensors_and_display_boards-cache
+EELAYER 26 0
+EELAYER END
+$Descr User 7087 9055
+encoding utf-8
+Sheet 1 3
+Title "SPSP"
+Date "2017-06-16"
+Rev "1"
+Comp "Łukasz Hejnak"
+Comment1 "Overview of connections between FPGA and sensor/display/comms circuit boards"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+NoConn ~ 3966 6966
+NoConn ~ 5716 6966
+NoConn ~ 5716 6416
+NoConn ~ 5716 6316
+NoConn ~ 5716 6216
+NoConn ~ 5716 6016
+NoConn ~ 5716 5916
+NoConn ~ 5716 5816
+NoConn ~ 5716 5716
+NoConn ~ 5716 5616
+NoConn ~ 5716 5516
+NoConn ~ 5716 5416
+NoConn ~ 5716 5066
+NoConn ~ 5716 4966
+NoConn ~ 5716 4866
+NoConn ~ 5716 4766
+NoConn ~ 5716 4466
+NoConn ~ 5716 4366
+NoConn ~ 5716 4266
+NoConn ~ 5716 4166
+NoConn ~ 5716 4066
+NoConn ~ 5716 3966
+NoConn ~ 5716 3566
+NoConn ~ 5716 3466
+NoConn ~ 5716 3366
+NoConn ~ 5716 3266
+NoConn ~ 5716 3166
+NoConn ~ 5716 2766
+NoConn ~ 5716 1266
+NoConn ~ 5716 1166
+NoConn ~ 5716 1066
+NoConn ~ 5716 966 
+NoConn ~ 5716 866 
+NoConn ~ 3966 6616
+NoConn ~ 3966 6516
+NoConn ~ 3966 6416
+NoConn ~ 3966 6316
+NoConn ~ 3966 6216
+NoConn ~ 3966 6116
+NoConn ~ 3966 6016
+NoConn ~ 3966 5916
+NoConn ~ 3966 5816
+NoConn ~ 3966 5716
+NoConn ~ 3966 5616
+NoConn ~ 3966 5516
+NoConn ~ 3966 5066
+NoConn ~ 3966 4966
+NoConn ~ 3966 4866
+NoConn ~ 3966 4766
+NoConn ~ 3966 4666
+NoConn ~ 3966 4466
+NoConn ~ 3966 4366
+NoConn ~ 3966 4266
+NoConn ~ 3966 4166
+NoConn ~ 3966 3566
+NoConn ~ 3966 3466
+NoConn ~ 3966 3366
+NoConn ~ 3966 3266
+NoConn ~ 3966 3166
+NoConn ~ 3966 2766
+NoConn ~ 3966 2666
+NoConn ~ 3966 2566
+NoConn ~ 3966 2466
+NoConn ~ 3966 2366
+NoConn ~ 3966 1266
+NoConn ~ 3966 1166
+NoConn ~ 3966 1066
+NoConn ~ 3966 966 
+NoConn ~ 3966 866 
+$Sheet
+S 838  3367 2076 1346
+U 5A5DD67B
+F0 "Sensors Board" 60
+F1 "sensors_board.sch" 60
+F2 "GP2Y-LED" T R 2914 3758 60 
+F3 "GP2Y-GND" I R 2914 3562 60 
+F4 "GP2Y-V0" O R 2914 3659 60 
+F5 "GP2Y-Vcc" I R 2914 3463 60 
+F6 "DHT-Vcc" I R 2914 3897 60 
+F7 "DHT-DATA" I R 2914 3995 60 
+F8 "DHT-GND" I R 2914 4092 60 
+F9 "LPS-Vin" I R 2914 4250 60 
+F10 "LPS-GND" I R 2914 4348 60 
+F11 "LPS-SDA" T R 2914 4447 60 
+F12 "LPS-SCL" T R 2914 4546 60 
+F13 "LPS-SDO" T R 2914 4645 60 
+$EndSheet
+$Sheet
+S 835  1228 2079 1656
+U 5A5DD685
+F0 "Display and Antenna Board" 60
+F1 "display_and_antenna_board.sch" 60
+F2 "RN-UART_TX" T R 2914 1504 60 
+F3 "RN-UART_RX" T R 2914 1603 60 
+F4 "RN-WAKE_SW" T R 2914 1702 60 
+F5 "RN-WAKE_HW" T R 2914 1799 60 
+F6 "DISP-DS" T R 2914 2487 60 
+F7 "DISP-PREV" T R 2914 2094 60 
+F8 "RN-PIO1" T R 2914 1896 60 
+F9 "DISPRN-VDD" I R 2914 1307 60 
+F10 "DISPRN-GND" I R 2914 1405 60 
+F11 "DISP-A0" B R 2914 2782 60 
+F12 "DISP-A1" B R 2914 2684 60 
+F13 "DISP-ENA" B R 2914 2585 60 
+F14 "DISP-SHCLK" B R 2914 2388 60 
+F15 "DISP-STCLK" B R 2914 2291 60 
+F16 "DISP-NEXT" B R 2914 2191 60 
+$EndSheet
+Entry Wire Line
+	2926 3463 3026 3563
+Entry Wire Line
+	2926 3562 3026 3662
+Entry Wire Line
+	2926 3659 3026 3759
+Entry Wire Line
+	2926 3758 3026 3858
+Text Label 2926 3463 0    10   ~ 0
+GP2Y-Vcc
+Text Label 2926 3562 0    10   ~ 0
+GP2Y-GND
+Text Label 2926 3659 0    10   ~ 0
+GP2Y-V0
+Text Label 2926 3758 0    10   ~ 0
+GP2Y-LED
+Entry Wire Line
+	3841 5516 3941 5416
+Entry Wire Line
+	5728 6616 5828 6716
+Entry Wire Line
+	5728 6516 5828 6616
+Entry Wire Line
+	5728 6116 5828 6216
+Text Label 3943 5416 2    60   ~ 0
+GP2Y-Vcc
+Text Label 5728 6116 0    60   ~ 0
+GP2Y-LED
+Text Label 5727 6616 0    60   ~ 0
+GP2Y-GND
+Text Label 5727 6516 0    60   ~ 0
+GP2Y-V0
+Entry Wire Line
+	2926 3897 3026 3997
+Entry Wire Line
+	2926 3996 3026 4096
+Entry Wire Line
+	2926 4092 3026 4192
+Text Label 2925 3897 0    10   ~ 0
+DHT-Vcc
+Text Label 2924 3995 0    10   ~ 0
+DHT-DATA
+Text Label 2925 4092 0    10   ~ 0
+DHT-GND
+Entry Wire Line
+	2926 4250 3026 4350
+Entry Wire Line
+	2926 4348 3026 4448
+Entry Wire Line
+	2926 4447 3026 4547
+Entry Wire Line
+	2926 4545 3026 4645
+Entry Wire Line
+	2926 4645 3026 4745
+Text Label 2926 4250 0    10   ~ 0
+LPS-Vin
+Text Label 2926 4348 0    10   ~ 0
+LPS-GND
+Text Label 2926 4447 0    10   ~ 0
+LPS-SDA
+Text Label 2926 4546 0    10   ~ 0
+LPS-SCL
+Text Label 2925 4645 0    10   ~ 0
+LPS-SDO
+Entry Wire Line
+	3857 3766 3957 3666
+Entry Wire Line
+	3857 3866 3957 3766
+Entry Wire Line
+	3857 3966 3957 3866
+Entry Wire Line
+	5728 3666 5828 3766
+Entry Wire Line
+	5728 4566 5828 4666
+Entry Wire Line
+	3857 4666 3957 4566
+Text Label 3959 4566 2    60   ~ 0
+DHT-Vcc
+Text Label 5727 3866 0    60   ~ 0
+DHT-DATA
+Text Label 5727 4566 0    60   ~ 0
+DHT-GND
+Text Label 5728 3666 0    60   ~ 0
+LPS-GND
+Text Label 3959 3666 2    60   ~ 0
+LPS-Vin
+Text Label 3959 3766 2    60   ~ 0
+LPS-SDA
+Text Label 3958 3866 2    60   ~ 0
+LPS-SCL
+Text Label 5727 3766 0    60   ~ 0
+LPS-SDO
+NoConn ~ 5716 2666
+NoConn ~ 5716 2566
+NoConn ~ 5716 2366
+NoConn ~ 5716 2466
+Entry Wire Line
+	3852 2166 3952 2066
+Entry Wire Line
+	3852 1566 3952 1466
+Entry Wire Line
+	3852 2366 3952 2266
+Entry Wire Line
+	5731 1466 5831 1566
+Entry Wire Line
+	5731 2266 5831 2366
+Entry Wire Line
+	5731 1766 5831 1866
+Entry Wire Line
+	5731 1866 5831 1966
+Entry Wire Line
+	5731 1966 5831 2066
+Entry Wire Line
+	3852 1966 3952 1866
+Entry Wire Line
+	3852 1866 3952 1766
+Entry Wire Line
+	3852 1666 3952 1566
+Entry Wire Line
+	3852 1766 3952 1666
+$Comp
+L spsp_components:DE0_NANO_Conn J1
+U 1 1 5A5DD14E
+P 4916 2966
+F 0 "J1" H 4236 5256 60  0000 C CNN
+F 1 "DE0_NANO_Conn" H 4906 5466 60  0001 C CNN
+F 2 "footprints:TH_DEO_NANO_NOJ5" H 4866 5596 60  0001 C CNN
+F 3 "" H 4916 2966 60  0000 C CNN
+F 4 "2 units of: CONN, RCPT, 40POS, .100\", DUAL TIN," H 4896 5716 60  0001 C CNN "Description"
+F 5 "CES-120-01-T-D" H 4896 5866 60  0001 C CNN "Manufacturer Part Number"
+F 6 "Digi-Key" H 4896 6096 60  0001 C CNN "Vendor"
+F 7 "SAM1086-20-ND" H 4926 6206 60  0001 C CNN "Vendor Part Number"
+F 8 "Samtec Inc" H 4906 5986 60  0001 C CNN "Manufacturer"
+F 9 "DE0_NANO_Conn" H 5156 5266 60  0000 C CNN "Component Value"
+	1    4916 2966
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	2929 1307 3029 1407
+Entry Wire Line
+	2929 1405 3029 1505
+Entry Wire Line
+	2929 1504 3029 1604
+Entry Wire Line
+	2929 1603 3029 1703
+Entry Wire Line
+	2929 1702 3029 1802
+Entry Wire Line
+	2929 1799 3029 1899
+Entry Wire Line
+	2929 2094 3029 2194
+Entry Wire Line
+	2929 2191 3029 2291
+Entry Wire Line
+	2929 2291 3029 2391
+Entry Wire Line
+	2929 2388 3029 2488
+Entry Wire Line
+	2929 2487 3029 2587
+Entry Wire Line
+	2929 2585 3029 2685
+Entry Wire Line
+	2929 2684 3029 2784
+Entry Wire Line
+	2929 2782 3029 2882
+Entry Wire Line
+	2929 1896 3029 1996
+Text Label 2928 1307 0    10   ~ 0
+DISPRN-VDD
+Text Label 2927 1405 0    10   ~ 0
+DISPRN-GND
+Text Label 2928 1504 0    10   ~ 0
+RN-UART_TX
+Text Label 2927 1603 0    10   ~ 0
+RN-UART_RX
+Text Label 2927 1702 0    10   ~ 0
+RN-WAKE_SW
+Text Label 2928 1799 0    10   ~ 0
+RN-WAKE_HW
+Text Label 2927 2094 0    10   ~ 0
+DISP-PREV
+Text Label 2927 2191 0    10   ~ 0
+DISP-NEXT
+Text Label 2928 2291 0    10   ~ 0
+DISP-STCLK
+Text Label 2927 2388 0    10   ~ 0
+DISP-SHCLK
+Text Label 2928 2487 0    10   ~ 0
+DISP-DS
+Text Label 2927 2585 0    10   ~ 0
+DISP-ENA
+Text Label 2928 2684 0    10   ~ 0
+DISP-A1
+Text Label 2927 2782 0    10   ~ 0
+DISP-A0
+Text Label 2928 1896 0    10   ~ 0
+RN-PIO1
+Text Label 3955 2266 2    60   ~ 0
+DISPRN-VDD
+Text Label 5730 2266 0    60   ~ 0
+DISPRN-GND
+Text Label 3954 1766 2    60   ~ 0
+RN-UART_RX
+Text Label 3954 1866 2    60   ~ 0
+RN-UART_TX
+Text Label 3953 1666 2    60   ~ 0
+RN-WAKE_SW
+Text Label 3954 1466 2    60   ~ 0
+RN-WAKE_HW
+NoConn ~ 5716 4666
+NoConn ~ 3966 3966
+NoConn ~ 3966 4066
+Entry Wire Line
+	5728 3766 5828 3866
+Entry Wire Line
+	5728 3866 5828 3966
+Text GLabel 5727 6616 2    10   Output ~ 0
+AGND
+Text GLabel 5730 2266 2    10   Output ~ 0
+DGND
+$Comp
+L power:GNDA #PWR01
+U 1 1 5A6CD47D
+P 1551 7832
+F 0 "#PWR01" H 1551 7582 50  0001 C CNN
+F 1 "GNDA" H 1551 7682 50  0000 C CNN
+F 2 "" H 1551 7832 50  0001 C CNN
+F 3 "" H 1551 7832 50  0001 C CNN
+	1    1551 7832
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR02
+U 1 1 5A6CE823
+P 1345 7832
+F 0 "#PWR02" H 1345 7582 50  0001 C CNN
+F 1 "GNDD" H 1345 7707 50  0000 C CNN
+F 2 "" H 1345 7832 50  0001 C CNN
+F 3 "" H 1345 7832 50  0001 C CNN
+	1    1345 7832
+	1    0    0    -1  
+$EndComp
+Text GLabel 1551 7832 1    10   Input ~ 0
+AGND
+Text GLabel 1345 7832 1    10   Input ~ 0
+DGND
+Text GLabel 5727 3666 2    10   Output ~ 0
+DGND
+Text GLabel 5727 4566 2    10   Output ~ 0
+DGND
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5A6DD6F4
+P 1551 7832
+F 0 "#FLG03" H 1551 7907 50  0001 C CNN
+F 1 "PWR_FLAG" H 1551 7982 50  0000 C CNN
+F 2 "" H 1551 7832 50  0001 C CNN
+F 3 "" H 1551 7832 50  0001 C CNN
+	1    1551 7832
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG04
+U 1 1 5A6DE0C7
+P 1345 7832
+F 0 "#FLG04" H 1345 7907 50  0001 C CNN
+F 1 "PWR_FLAG" H 1345 7982 50  0000 C CNN
+F 2 "" H 1345 7832 50  0001 C CNN
+F 3 "" H 1345 7832 50  0001 C CNN
+	1    1345 7832
+	0    -1   -1   0   
+$EndComp
+Text Label 3954 1566 2    60   ~ 0
+RN-PIO1
+Entry Wire Line
+	3852 2066 3952 1966
+NoConn ~ 3966 1366
+NoConn ~ 5716 1366
+Entry Wire Line
+	5731 1666 5831 1766
+Entry Wire Line
+	5731 1566 5831 1666
+Wire Wire Line
+	2914 4092 2926 4092
+Wire Wire Line
+	2926 3995 2926 3996
+Wire Wire Line
+	2914 3995 2926 3995
+Wire Wire Line
+	2914 3897 2926 3897
+Wire Wire Line
+	5716 6616 5728 6616
+Wire Wire Line
+	5716 6516 5728 6516
+Wire Wire Line
+	5716 6116 5728 6116
+Wire Wire Line
+	3941 5416 3966 5416
+Wire Wire Line
+	2926 3463 2914 3463
+Wire Wire Line
+	2914 3562 2926 3562
+Wire Wire Line
+	2914 3659 2926 3659
+Wire Wire Line
+	2914 3758 2926 3758
+Wire Wire Line
+	2914 4250 2926 4250
+Wire Wire Line
+	2914 4348 2926 4348
+Wire Wire Line
+	2914 4447 2926 4447
+Wire Wire Line
+	2914 4546 2926 4546
+Wire Wire Line
+	2926 4546 2926 4545
+Wire Wire Line
+	2914 4645 2926 4645
+Wire Wire Line
+	3957 3666 3966 3666
+Wire Wire Line
+	3957 3766 3966 3766
+Wire Wire Line
+	3957 3866 3966 3866
+Wire Wire Line
+	5716 4566 5728 4566
+Wire Wire Line
+	5728 3666 5716 3666
+Wire Wire Line
+	3957 4566 3966 4566
+Wire Wire Line
+	5731 2266 5716 2266
+Wire Wire Line
+	3952 2066 3966 2066
+Wire Wire Line
+	5716 1566 5731 1566
+Wire Wire Line
+	5716 1666 5731 1666
+Wire Wire Line
+	3952 1566 3966 1566
+Wire Wire Line
+	3952 1666 3966 1666
+Wire Wire Line
+	3952 1766 3966 1766
+Wire Bus Line
+	3852 2370 3853 2370
+Wire Wire Line
+	3952 2266 3966 2266
+Wire Wire Line
+	2914 1307 2929 1307
+Wire Wire Line
+	2914 1405 2929 1405
+Wire Wire Line
+	2914 1504 2929 1504
+Wire Wire Line
+	2929 1603 2914 1603
+Wire Wire Line
+	2929 1702 2914 1702
+Wire Wire Line
+	2929 1799 2914 1799
+Wire Wire Line
+	2914 2094 2929 2094
+Wire Wire Line
+	2914 2191 2929 2191
+Wire Wire Line
+	2914 2291 2929 2291
+Wire Wire Line
+	2914 2388 2929 2388
+Wire Wire Line
+	2914 2487 2929 2487
+Wire Wire Line
+	2914 2585 2929 2585
+Wire Wire Line
+	2914 2684 2929 2684
+Wire Wire Line
+	2929 2782 2914 2782
+Wire Wire Line
+	5716 3766 5728 3766
+Wire Wire Line
+	5728 3866 5716 3866
+Wire Wire Line
+	2914 1896 2929 1896
+Wire Wire Line
+	3952 1966 3966 1966
+Wire Wire Line
+	5716 1966 5731 1966
+Wire Wire Line
+	5716 1866 5731 1866
+Wire Wire Line
+	5716 1766 5731 1766
+Wire Wire Line
+	3952 1866 3966 1866
+Wire Wire Line
+	3966 1466 3952 1466
+NoConn ~ 3966 2166
+NoConn ~ 5716 2166
+Text Label 3955 1966 2    60   ~ 0
+DISP-NEXT
+Text Label 3955 2066 2    60   ~ 0
+DISP-PREV
+Text Label 5729 1766 0    60   ~ 0
+DISP-DS
+Text Label 5729 1866 0    60   ~ 0
+DISP-SHCLK
+Text Label 5728 1666 0    60   ~ 0
+DISP-ENA
+Text Label 5729 1466 0    60   ~ 0
+DISP-A0
+Text Label 5729 1566 0    60   ~ 0
+DISP-A1
+Text Label 5730 1966 0    60   ~ 0
+DISP-STCLK
+Wire Wire Line
+	5716 1466 5731 1466
+NoConn ~ 5716 2066
+Wire Bus Line
+	3841 5494 3841 5535
+Wire Bus Line
+	3857 3766 3857 4666
+Wire Bus Line
+	5828 3766 5828 4666
+Wire Bus Line
+	5828 6215 5828 6723
+Wire Bus Line
+	3026 3563 3026 4756
+Wire Bus Line
+	3852 1560 3852 2370
+Wire Bus Line
+	5831 1564 5831 2367
+Wire Bus Line
+	3029 1407 3029 2884
+$EndSCHEMATC

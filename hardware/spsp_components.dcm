@@ -1,0 +1,57 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 74HC14
+D Hex inverting Schmitt trigger
+$ENDCMP
+#
+$CMP 74HC238
+D 3-to-8 line decoder/demultiplexer
+$ENDCMP
+#
+$CMP 74HC4053
+D Triple 2-channel analog multiplexer/demultiplexer
+$ENDCMP
+#
+$CMP 74HC4066
+D Quad single-pole single-throw analog switch
+$ENDCMP
+#
+$CMP 74HC595
+D 8-bit serial-in, serial or parallel-out shift register with output latches; 3-state
+$ENDCMP
+#
+$CMP DE0_NANO_Conn
+D DE0-Nano FPGA
+$ENDCMP
+#
+$CMP DHT11
+D Temperature and humidity module
+K digital temperature humidity sensor
+F http://akizukidenshi.com/download/ds/aosong/DHT11.pdf
+$ENDCMP
+#
+$CMP FJ-5461BH
+D 4-digit 8-seg common anode display
+$ENDCMP
+#
+$CMP GP2Y1010AU0F
+D GP2Y1010AU0F Compact Optical Dust Sensor
+$ENDCMP
+#
+$CMP LPS331AP
+D Presure and temperature sensor
+$ENDCMP
+#
+$CMP PM10Sensor
+D Compact Optical Dust Sensor
+$ENDCMP
+#
+$CMP RN4020
+D Bluetooth Low Energy Module
+$ENDCMP
+#
+$CMP Wyświetlacz
+D Presure and temperature sensor
+$ENDCMP
+#
+#End Doc Library
