@@ -20,7 +20,7 @@ ext | | external code and modules, usually from Quartus or eewiki
 :small_blue_diamond: | i2c_master | Inter-integrated Circuit Protocol (I²C) implementation
 :small_blue_diamond: | spi master | Serial Peripheral Interface (SPI) implementation
 :small_blue_diamond: | uart | UART implementation
-modules | implement main system operation logic
+modules | | implement main system operation logic
 :small_blue_diamond: | Sensors | Interfacing with the sensor drivers, fetching data on request.
 :small_blue_diamond: | DataProcessor | Aggregating data from the sensors, calculating PM10 readout to norm relation (%).
 :small_blue_diamond: | Scheduler | Triggering the data collection process at given intervals.
